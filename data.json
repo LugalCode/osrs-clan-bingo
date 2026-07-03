@@ -1,15 +1,15 @@
 {
-  "generated_at": "2026-07-03T17:41:47.371261+00:00",
+  "generated_at": "2026-07-03T18:49:12.912011+00:00",
   "teams": {
     "Team 1": {
       "tiles": {
         "Tile 1": {
           "name": "TOA",
-          "complete": false
+          "complete": true
         },
         "Tile 2": {
           "name": "Maggot King",
-          "complete": false
+          "complete": true
         },
         "Tile 3": {
           "name": "Gwds",
@@ -101,7 +101,7 @@
         },
         "Tile 10": {
           "name": "Zalcano",
-          "complete": false
+          "complete": true
         },
         "Tile 11": {
           "name": "Royal Titans",
@@ -129,7 +129,7 @@
         },
         "Tile 2": {
           "name": "Maggot King",
-          "complete": false
+          "complete": true
         },
         "Tile 3": {
           "name": "Gwds",
@@ -141,7 +141,7 @@
         },
         "Tile 5": {
           "name": "Moons of Peril",
-          "complete": false
+          "complete": true
         },
         "Tile 6": {
           "name": "Zulrah",
@@ -205,7 +205,7 @@
         },
         "Tile 6": {
           "name": "Zulrah",
-          "complete": false
+          "complete": true
         },
         "Tile 7": {
           "name": "Hueycoatl",
@@ -217,7 +217,7 @@
         },
         "Tile 9": {
           "name": "Trawling",
-          "complete": false
+          "complete": true
         },
         "Tile 10": {
           "name": "Zalcano",
