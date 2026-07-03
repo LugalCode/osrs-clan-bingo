@@ -16,7 +16,6 @@ OUTPUT_FILE = "data.json"
 
 SHEET_ID_PATTERN = re.compile(r"/d/([a-zA-Z0-9-_]+)")
 GID_PATTERN = re.compile(r"[#?&]gid=(\d+)")
-TEAM_HEADER_PATTERN = re.compile(r"^Team \d+$")
 
 
 def fetch_csv_rows(link: str) -> list:
@@ -33,11 +32,17 @@ def fetch_csv_rows(link: str) -> list:
 
 
 def parse_overview(rows: list) -> dict:
-    """Scans for 'Team N' headers anywhere in the grid, reads the tile rows beneath them."""
+    """Detects a team block structurally — any cell whose next row down (same column) reads
+    'Tile 1' is treated as that team's header, whatever text it contains. This works for both
+    literal 'Team 1' labels and custom team names, and survives the sheet being reordered."""
     teams = {}
     for r, row in enumerate(rows):
         for c, cell in enumerate(row):
-            if not cell or not TEAM_HEADER_PATTERN.match(cell.strip()):
+            if not cell or not cell.strip():
+                continue
+            next_row = rows[r + 1] if r + 1 < len(rows) else []
+            first_tile_label = next_row[c].strip() if c < len(next_row) else ""
+            if first_tile_label != "Tile 1":
                 continue
             team_name = cell.strip()
             tiles = {}

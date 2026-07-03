@@ -9,7 +9,7 @@ async function loadData() {
   document.getElementById("updated-at").textContent =
     `Last updated: ${updatedAt.toLocaleString()}`;
 
-  const teamNames = Object.keys(boardData.teams).sort();
+  const teamNames = Object.keys(boardData.teams);
   renderTabs(teamNames);
   currentTeam = teamNames[0];
   renderBoard(currentTeam);
