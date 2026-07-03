@@ -30,12 +30,25 @@ function renderTabs(teamNames) {
   });
 }
 
+function renderRoster(roster) {
+  const container = document.getElementById("team-roster");
+  container.innerHTML = "";
+  (roster || []).forEach((name) => {
+    const chip = document.createElement("span");
+    chip.className = "roster-chip";
+    chip.textContent = name;
+    container.appendChild(chip);
+  });
+}
+
 function renderBoard(teamName) {
   document.querySelectorAll(".tab-button").forEach((btn) => {
     btn.classList.toggle("active", btn.textContent === teamName);
   });
 
-  const tiles = boardData.teams[teamName];
+  const { tiles, roster } = boardData.teams[teamName];
+  renderRoster(roster);
+
   const overlay = document.getElementById("tile-overlay");
   overlay.innerHTML = "";
 

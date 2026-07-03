@@ -14,6 +14,10 @@ import requests
 SHEET_URL = "https://docs.google.com/spreadsheets/d/13RTvN7TxLMFTij03AiuzMi6NKwdBhqPfn31kf_djJ8A/edit"
 OUTPUT_FILE = "data.json"
 
+# PLACEHOLDER: pulls real clan members from Wise Old Man and arbitrarily splits them across
+# teams just to preview the roster row's layout. Remove this once the sheet has a real Rosters tab.
+WOM_GROUP_ID = 13796
+
 SHEET_ID_PATTERN = re.compile(r"/d/([a-zA-Z0-9-_]+)")
 GID_PATTERN = re.compile(r"[#?&]gid=(\d+)")
 
@@ -64,9 +68,33 @@ def parse_overview(rows: list) -> dict:
     return teams
 
 
+PLACEHOLDER_ROSTER_SIZE = 6
+
+
+def fetch_placeholder_rosters(team_names: list) -> dict:
+    """Splits a handful of real WOM group members across teams, just for layout preview
+    (capped per team so it looks like a realistic roster size, not the whole 100+ member clan)."""
+    response = requests.get(f"https://api.wiseoldman.net/v2/groups/{WOM_GROUP_ID}", timeout=15)
+    response.raise_for_status()
+    members = [m["player"]["displayName"] for m in response.json()["memberships"]]
+    members.sort()
+    members = members[: PLACEHOLDER_ROSTER_SIZE * len(team_names)]
+
+    rosters = {name: [] for name in team_names}
+    for i, member in enumerate(members):
+        team_name = team_names[i % len(team_names)]
+        rosters[team_name].append(member)
+    return rosters
+
+
 def main():
     rows = fetch_csv_rows(SHEET_URL)
     teams = parse_overview(rows)
+
+    rosters = fetch_placeholder_rosters(list(teams.keys())) if teams else {}
+    for team_name, tiles in teams.items():
+        teams[team_name] = {"tiles": tiles, "roster": rosters.get(team_name, [])}
+
     output = {"generated_at": datetime.now(timezone.utc).isoformat(), "teams": teams}
     with open(OUTPUT_FILE, "w") as f:
         json.dump(output, f, indent=2)
