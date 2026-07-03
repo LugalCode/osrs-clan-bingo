@@ -48,6 +48,10 @@ function renderBoard(teamName) {
     cell.className = "tile-cell";
     if (tile && tile.complete) {
       completeCount++;
+      const dim = document.createElement("div");
+      dim.className = "dim-layer";
+      cell.appendChild(dim);
+
       const skull = document.createElement("img");
       skull.className = "skull";
       skull.src = "skull.png";
