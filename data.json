@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-03T18:49:12.912011+00:00",
+  "generated_at": "2026-07-03T20:05:01.030686+00:00",
   "teams": {
     "Team 1": {
       "tiles": {
@@ -54,11 +54,11 @@
       },
       "roster": [
         "1 Z K R",
-        "A A rom",
-        "Biskibiscuit",
-        "Darth Grave",
-        "DragonForce",
-        "GIM Alliaz"
+        "A C E 5",
+        "BootyProbe",
+        "Death Lion2",
+        "Exvy v2",
+        "GIM Hoid"
       ]
     },
     "Team 2": {
@@ -114,11 +114,11 @@
       },
       "roster": [
         "5defencemeta",
-        "A C E 5",
-        "BootyProbe",
-        "Death Lion2",
-        "Exvy v2",
-        "GIM Hoid"
+        "Adora Vivos",
+        "CruelNutella",
+        "Dey420",
+        "Farhud",
+        "GOTH SL4VE"
       ]
     },
     "Team 3": {
@@ -174,11 +174,11 @@
       },
       "roster": [
         "95 xi",
-        "Adora Vivos",
-        "CruelNutella",
-        "Dey420",
-        "Farhud",
-        "GIM K y r a"
+        "BiskiBiski",
+        "Dapphne",
+        "Dog 0f War",
+        "ForsakenDc",
+        "Gallantkill"
       ]
     },
     "Team 4": {
@@ -233,12 +233,12 @@
         }
       },
       "roster": [
-        "9th circle",
-        "BiskiBiski",
-        "Dapphne",
-        "Dog 0f War",
-        "ForsakenDc",
-        "GOTH SL4VE"
+        "A A rom",
+        "Biskibiscuit",
+        "Darth Grave",
+        "DragonForce",
+        "GIM Alliaz",
+        "GraveofSins"
       ]
     }
   }
