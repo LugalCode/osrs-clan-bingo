@@ -1,0 +1,205 @@
+{
+  "generated_at": "2026-07-03T14:24:17.976202+00:00",
+  "teams": {
+    "Team 1": {
+      "Tile 1": {
+        "name": "TOA",
+        "complete": false
+      },
+      "Tile 2": {
+        "name": "Maggot King",
+        "complete": false
+      },
+      "Tile 3": {
+        "name": "Gwds",
+        "complete": false
+      },
+      "Tile 4": {
+        "name": "Fishing Xp",
+        "complete": false
+      },
+      "Tile 5": {
+        "name": "Moons of Peril",
+        "complete": true
+      },
+      "Tile 6": {
+        "name": "Zulrah",
+        "complete": false
+      },
+      "Tile 7": {
+        "name": "Hueycoatl",
+        "complete": false
+      },
+      "Tile 8": {
+        "name": "Scurrius",
+        "complete": false
+      },
+      "Tile 9": {
+        "name": "Trawling",
+        "complete": false
+      },
+      "Tile 10": {
+        "name": "Zalcano",
+        "complete": true
+      },
+      "Tile 11": {
+        "name": "Royal Titans",
+        "complete": false
+      },
+      "Tile 12": {
+        "name": "Phantom Muspah",
+        "complete": false
+      }
+    },
+    "Team 2": {
+      "Tile 1": {
+        "name": "TOA",
+        "complete": false
+      },
+      "Tile 2": {
+        "name": "Maggot King",
+        "complete": false
+      },
+      "Tile 3": {
+        "name": "Gwds",
+        "complete": false
+      },
+      "Tile 4": {
+        "name": "Fishing Xp",
+        "complete": false
+      },
+      "Tile 5": {
+        "name": "Moons of Peril",
+        "complete": false
+      },
+      "Tile 6": {
+        "name": "Zulrah",
+        "complete": true
+      },
+      "Tile 7": {
+        "name": "Hueycoatl",
+        "complete": false
+      },
+      "Tile 8": {
+        "name": "Scurrius",
+        "complete": false
+      },
+      "Tile 9": {
+        "name": "Trawling",
+        "complete": false
+      },
+      "Tile 10": {
+        "name": "Zalcano",
+        "complete": false
+      },
+      "Tile 11": {
+        "name": "Royal Titans",
+        "complete": false
+      },
+      "Tile 12": {
+        "name": "Phantom Muspah",
+        "complete": false
+      }
+    },
+    "Team 3": {
+      "Tile 1": {
+        "name": "TOA",
+        "complete": false
+      },
+      "Tile 2": {
+        "name": "Maggot King",
+        "complete": false
+      },
+      "Tile 3": {
+        "name": "Gwds",
+        "complete": false
+      },
+      "Tile 4": {
+        "name": "Fishing Xp",
+        "complete": false
+      },
+      "Tile 5": {
+        "name": "Moons of Peril",
+        "complete": false
+      },
+      "Tile 6": {
+        "name": "Zulrah",
+        "complete": false
+      },
+      "Tile 7": {
+        "name": "Hueycoatl",
+        "complete": false
+      },
+      "Tile 8": {
+        "name": "Scurrius",
+        "complete": true
+      },
+      "Tile 9": {
+        "name": "Trawling",
+        "complete": false
+      },
+      "Tile 10": {
+        "name": "Zalcano",
+        "complete": false
+      },
+      "Tile 11": {
+        "name": "Royal Titans",
+        "complete": false
+      },
+      "Tile 12": {
+        "name": "Phantom Muspah",
+        "complete": false
+      }
+    },
+    "Team 4": {
+      "Tile 1": {
+        "name": "TOA",
+        "complete": false
+      },
+      "Tile 2": {
+        "name": "Maggot King",
+        "complete": true
+      },
+      "Tile 3": {
+        "name": "Gwds",
+        "complete": false
+      },
+      "Tile 4": {
+        "name": "Fishing Xp",
+        "complete": false
+      },
+      "Tile 5": {
+        "name": "Moons of Peril",
+        "complete": false
+      },
+      "Tile 6": {
+        "name": "Zulrah",
+        "complete": false
+      },
+      "Tile 7": {
+        "name": "Hueycoatl",
+        "complete": false
+      },
+      "Tile 8": {
+        "name": "Scurrius",
+        "complete": false
+      },
+      "Tile 9": {
+        "name": "Trawling",
+        "complete": false
+      },
+      "Tile 10": {
+        "name": "Zalcano",
+        "complete": false
+      },
+      "Tile 11": {
+        "name": "Royal Titans",
+        "complete": false
+      },
+      "Tile 12": {
+        "name": "Phantom Muspah",
+        "complete": false
+      }
+    }
+  }
+}
