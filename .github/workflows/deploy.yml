@@ -1,8 +1,10 @@
 name: Update bingo data and deploy
 
 on:
-  schedule:
-    - cron: "*/5 * * * *"
+  # No schedule trigger — GitHub's own cron scheduler is unreliable (frequently skips/delays
+  # runs well beyond the configured interval). A cron job on the always-on VM instead calls
+  # this via workflow_dispatch every 5 minutes, which is actually reliable. Keeping both
+  # active caused overlapping runs to collide on the same Pages deployment slot.
   workflow_dispatch:
   push:
     branches: [main]
