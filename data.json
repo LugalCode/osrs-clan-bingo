@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T09:37:46.637698+00:00",
+  "generated_at": "2026-07-04T09:55:13.755636+00:00",
   "teams": {
     "Team 1": {
       "tiles": {
@@ -29,7 +29,7 @@
         },
         "Tile 7": {
           "name": "Hueycoatl",
-          "complete": false
+          "complete": true
         },
         "Tile 8": {
           "name": "Scurrius",
