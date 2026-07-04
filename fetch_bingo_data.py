@@ -6,6 +6,7 @@ Run manually (python fetch_bingo_data.py) or via the scheduled GitHub Action.
 import csv
 import io
 import json
+import os
 import re
 from datetime import datetime, timezone
 
@@ -87,6 +88,13 @@ def fetch_placeholder_rosters(team_names: list) -> dict:
     return rosters
 
 
+def _load_existing_teams() -> dict:
+    if not os.path.exists(OUTPUT_FILE):
+        return None
+    with open(OUTPUT_FILE, "r") as f:
+        return json.load(f).get("teams")
+
+
 def main():
     rows = fetch_csv_rows(SHEET_URL)
     teams = parse_overview(rows)
@@ -94,6 +102,13 @@ def main():
     rosters = fetch_placeholder_rosters(list(teams.keys())) if teams else {}
     for team_name, tiles in teams.items():
         teams[team_name] = {"tiles": tiles, "roster": rosters.get(team_name, [])}
+
+    # Only rewrite the file (and bump generated_at) if the actual tile/roster data changed —
+    # otherwise every run "changes" the file just via the timestamp, forcing a redeploy every
+    # time regardless of whether anything real happened. See deploy.yml for why that matters.
+    if teams == _load_existing_teams():
+        print("No changes since last run — leaving data.json untouched.")
+        return
 
     output = {"generated_at": datetime.now(timezone.utc).isoformat(), "teams": teams}
     with open(OUTPUT_FILE, "w") as f:
