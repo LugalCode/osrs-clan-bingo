@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-04T07:27:12.854148+00:00",
+  "generated_at": "2026-07-04T09:25:20.134215+00:00",
   "teams": {
     "Team 1": {
       "tiles": {
@@ -65,7 +65,7 @@
       "tiles": {
         "Tile 1": {
           "name": "TOA",
-          "complete": false
+          "complete": true
         },
         "Tile 2": {
           "name": "Maggot King",
@@ -77,7 +77,7 @@
         },
         "Tile 4": {
           "name": "Fishing Xp",
-          "complete": false
+          "complete": true
         },
         "Tile 5": {
           "name": "Moons of Peril",
@@ -165,11 +165,11 @@
         },
         "Tile 11": {
           "name": "Royal Titans",
-          "complete": false
+          "complete": true
         },
         "Tile 12": {
           "name": "Phantom Muspah",
-          "complete": false
+          "complete": true
         }
       },
       "roster": [
@@ -229,7 +229,7 @@
         },
         "Tile 12": {
           "name": "Phantom Muspah",
-          "complete": false
+          "complete": true
         }
       },
       "roster": [
