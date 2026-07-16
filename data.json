@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-16T12:05:16.467667+00:00",
+  "generated_at": "2026-07-16T12:10:11.293253+00:00",
   "teams": {
     "Team 1": {
       "tiles": {
@@ -185,7 +185,7 @@
       "tiles": {
         "Tile 1": {
           "name": "TOA",
-          "complete": true
+          "complete": false
         },
         "Tile 2": {
           "name": "Maggot King",
