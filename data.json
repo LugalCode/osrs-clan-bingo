@@ -1,11 +1,11 @@
 {
-  "generated_at": "2026-07-04T09:55:13.755636+00:00",
+  "generated_at": "2026-07-16T08:40:49.126070+00:00",
   "teams": {
     "Team 1": {
       "tiles": {
         "Tile 1": {
           "name": "TOA",
-          "complete": true
+          "complete": false
         },
         "Tile 2": {
           "name": "Maggot King",
@@ -29,7 +29,7 @@
         },
         "Tile 7": {
           "name": "Hueycoatl",
-          "complete": true
+          "complete": false
         },
         "Tile 8": {
           "name": "Scurrius",
@@ -53,19 +53,19 @@
         }
       },
       "roster": [
-        "1 Z K R",
-        "A C E 5",
-        "BootyProbe",
-        "Death Lion2",
-        "Exvy v2",
-        "GIM Hoid"
+        "Neyes",
+        "Bungaku",
+        "MCLOVINNN316",
+        "Player263241",
+        "Stayin Olive",
+        "TheGothGF"
       ]
     },
     "Team 2": {
       "tiles": {
         "Tile 1": {
           "name": "TOA",
-          "complete": true
+          "complete": false
         },
         "Tile 2": {
           "name": "Maggot King",
@@ -101,7 +101,7 @@
         },
         "Tile 10": {
           "name": "Zalcano",
-          "complete": true
+          "complete": false
         },
         "Tile 11": {
           "name": "Royal Titans",
@@ -113,12 +113,72 @@
         }
       },
       "roster": [
-        "5defencemeta",
-        "Adora Vivos",
-        "CruelNutella",
-        "Dey420",
-        "Farhud",
-        "GOTH SL4VE"
+        "A C E 5",
+        "DR Mafia",
+        "DFirth1993",
+        "VZIU",
+        "Death Lion2",
+        "feralg00se"
+      ]
+    },
+    "Team 5": {
+      "tiles": {
+        "Tile 1": {
+          "name": "TOA",
+          "complete": false
+        },
+        "Tile 2": {
+          "name": "Maggot King",
+          "complete": false
+        },
+        "Tile 3": {
+          "name": "Gwds",
+          "complete": false
+        },
+        "Tile 4": {
+          "name": "Fishing Xp",
+          "complete": false
+        },
+        "Tile 5": {
+          "name": "Moons of Peril",
+          "complete": false
+        },
+        "Tile 6": {
+          "name": "Zulrah",
+          "complete": false
+        },
+        "Tile 7": {
+          "name": "Hueycoatl",
+          "complete": false
+        },
+        "Tile 8": {
+          "name": "Scurrius",
+          "complete": false
+        },
+        "Tile 9": {
+          "name": "Trawling",
+          "complete": false
+        },
+        "Tile 10": {
+          "name": "Zalcano",
+          "complete": false
+        },
+        "Tile 11": {
+          "name": "Royal Titans",
+          "complete": false
+        },
+        "Tile 12": {
+          "name": "Phantom Muspah",
+          "complete": false
+        }
+      },
+      "roster": [
+        "TyboJones",
+        "Schools",
+        "Podcasters",
+        "Dapphne",
+        "Eshcka",
+        "JohnnyScaper"
       ]
     },
     "Team 3": {
@@ -129,7 +189,7 @@
         },
         "Tile 2": {
           "name": "Maggot King",
-          "complete": true
+          "complete": false
         },
         "Tile 3": {
           "name": "Gwds",
@@ -169,16 +229,16 @@
         },
         "Tile 12": {
           "name": "Phantom Muspah",
-          "complete": true
+          "complete": false
         }
       },
       "roster": [
-        "95 xi",
-        "BiskiBiski",
-        "Dapphne",
-        "Dog 0f War",
-        "ForsakenDc",
-        "Gallantkill"
+        "Tiki Mug",
+        "Darth Grave",
+        "LostCaws",
+        "MarkDavidIM",
+        "evilorcmind",
+        "Split it I"
       ]
     },
     "Team 4": {
@@ -197,7 +257,7 @@
         },
         "Tile 4": {
           "name": "Fishing Xp",
-          "complete": true
+          "complete": false
         },
         "Tile 5": {
           "name": "Moons of Peril",
@@ -221,7 +281,7 @@
         },
         "Tile 10": {
           "name": "Zalcano",
-          "complete": true
+          "complete": false
         },
         "Tile 11": {
           "name": "Royal Titans",
@@ -233,12 +293,12 @@
         }
       },
       "roster": [
-        "A A rom",
-        "Biskibiscuit",
-        "Darth Grave",
-        "DragonForce",
-        "GIM Alliaz",
-        "GraveofSins"
+        "I Skrill",
+        "NayffWeb",
+        "TheOneJBass",
+        "GIM Korakie",
+        "That Bearded",
+        "KoalaNoodle"
       ]
     }
   }
