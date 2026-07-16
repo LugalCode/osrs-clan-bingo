@@ -116,10 +116,18 @@ def _load_existing_teams() -> dict:
         return json.load(f).get("teams")
 
 
+def _team_sort_key(team_name: str):
+    """Sorts 'Team N' names numerically so tab order matches team number, regardless of
+    which column the team happened to land in on the sheet."""
+    match = re.search(r"\d+", team_name)
+    return (int(match.group()), team_name) if match else (float("inf"), team_name)
+
+
 def main():
     rows = fetch_csv_rows(SHEET_URL)
     teams = parse_overview(rows)
 
+    teams = {name: teams[name] for name in sorted(teams, key=_team_sort_key)}
     for team_name, tiles in teams.items():
         teams[team_name] = {"tiles": tiles, "roster": ROSTERS.get(team_name, [])}
 
