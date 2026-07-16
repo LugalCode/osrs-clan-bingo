@@ -12,12 +12,52 @@ from datetime import datetime, timezone
 
 import requests
 
-SHEET_URL = "https://docs.google.com/spreadsheets/d/13RTvN7TxLMFTij03AiuzMi6NKwdBhqPfn31kf_djJ8A/edit"
+SHEET_URL = "https://docs.google.com/spreadsheets/d/1aRS9pJ3ePWiwOtD_yx7qLJpNFXT0HjBWOZTXihi4gEI/edit?gid=2001374638#gid=2001374638"
 OUTPUT_FILE = "data.json"
 
-# PLACEHOLDER: pulls real clan members from Wise Old Man and arbitrarily splits them across
-# teams just to preview the roster row's layout. Remove this once the sheet has a real Rosters tab.
-WOM_GROUP_ID = 13796
+# Final rosters for the current bingo event, decided and locked in.
+ROSTERS = {
+    "Team 1": [
+        "Neyes",
+        "Bungaku",
+        "MCLOVINNN316",
+        "Player263241",
+        "Stayin Olive",
+        "TheGothGF",
+    ],
+    "Team 2": [
+        "A C E 5",
+        "DR Mafia",
+        "DFirth1993",
+        "VZIU",
+        "Death Lion2",
+        "feralg00se",
+    ],
+    "Team 3": [
+        "Tiki Mug",
+        "Darth Grave",
+        "LostCaws",
+        "MarkDavidIM",
+        "evilorcmind",
+        "Split it I",
+    ],
+    "Team 4": [
+        "I Skrill",
+        "NayffWeb",
+        "TheOneJBass",
+        "GIM Korakie",
+        "That Bearded",
+        "KoalaNoodle",
+    ],
+    "Team 5": [
+        "TyboJones",
+        "Schools",
+        "Podcasters",
+        "Dapphne",
+        "Eshcka",
+        "JohnnyScaper",
+    ],
+}
 
 SHEET_ID_PATTERN = re.compile(r"/d/([a-zA-Z0-9-_]+)")
 GID_PATTERN = re.compile(r"[#?&]gid=(\d+)")
@@ -69,25 +109,6 @@ def parse_overview(rows: list) -> dict:
     return teams
 
 
-PLACEHOLDER_ROSTER_SIZE = 6
-
-
-def fetch_placeholder_rosters(team_names: list) -> dict:
-    """Splits a handful of real WOM group members across teams, just for layout preview
-    (capped per team so it looks like a realistic roster size, not the whole 100+ member clan)."""
-    response = requests.get(f"https://api.wiseoldman.net/v2/groups/{WOM_GROUP_ID}", timeout=15)
-    response.raise_for_status()
-    members = [m["player"]["displayName"] for m in response.json()["memberships"]]
-    members.sort()
-    members = members[: PLACEHOLDER_ROSTER_SIZE * len(team_names)]
-
-    rosters = {name: [] for name in team_names}
-    for i, member in enumerate(members):
-        team_name = team_names[i % len(team_names)]
-        rosters[team_name].append(member)
-    return rosters
-
-
 def _load_existing_teams() -> dict:
     if not os.path.exists(OUTPUT_FILE):
         return None
@@ -99,9 +120,8 @@ def main():
     rows = fetch_csv_rows(SHEET_URL)
     teams = parse_overview(rows)
 
-    rosters = fetch_placeholder_rosters(list(teams.keys())) if teams else {}
     for team_name, tiles in teams.items():
-        teams[team_name] = {"tiles": tiles, "roster": rosters.get(team_name, [])}
+        teams[team_name] = {"tiles": tiles, "roster": ROSTERS.get(team_name, [])}
 
     # Only rewrite the file (and bump generated_at) if the actual tile/roster data changed —
     # otherwise every run "changes" the file just via the timestamp, forcing a redeploy every
