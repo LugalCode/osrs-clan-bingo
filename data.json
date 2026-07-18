@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T10:25:15.557194+00:00",
+  "generated_at": "2026-07-18T13:15:10.746043+00:00",
   "teams": {
     "Team 1": {
       "tiles": {
@@ -109,7 +109,7 @@
         },
         "Tile 12": {
           "name": "Phantom Muspah",
-          "complete": false
+          "complete": true
         }
       },
       "roster": [
