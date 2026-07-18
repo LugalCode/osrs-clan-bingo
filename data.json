@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-17T21:40:11.955622+00:00",
+  "generated_at": "2026-07-18T09:20:10.708766+00:00",
   "teams": {
     "Team 1": {
       "tiles": {
@@ -13,7 +13,7 @@
         },
         "Tile 3": {
           "name": "Gwds",
-          "complete": false
+          "complete": true
         },
         "Tile 4": {
           "name": "Fishing Xp",
@@ -145,7 +145,7 @@
         },
         "Tile 6": {
           "name": "Zulrah",
-          "complete": false
+          "complete": true
         },
         "Tile 7": {
           "name": "Hueycoatl",
@@ -185,7 +185,7 @@
       "tiles": {
         "Tile 1": {
           "name": "TOA",
-          "complete": false
+          "complete": true
         },
         "Tile 2": {
           "name": "Maggot King",
@@ -201,7 +201,7 @@
         },
         "Tile 5": {
           "name": "Moons of Peril",
-          "complete": false
+          "complete": true
         },
         "Tile 6": {
           "name": "Zulrah",
