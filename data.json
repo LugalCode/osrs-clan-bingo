@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-18T09:25:14.356697+00:00",
+  "generated_at": "2026-07-18T10:25:15.557194+00:00",
   "teams": {
     "Team 1": {
       "tiles": {
@@ -153,7 +153,7 @@
         },
         "Tile 8": {
           "name": "Scurrius",
-          "complete": false
+          "complete": true
         },
         "Tile 9": {
           "name": "Trawling",
