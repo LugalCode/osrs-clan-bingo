@@ -1,5 +1,5 @@
 {
-  "generated_at": "2026-07-19T17:55:16.291960+00:00",
+  "generated_at": "2026-07-19T19:30:13.533732+00:00",
   "teams": {
     "Team 1": {
       "tiles": {
@@ -221,7 +221,7 @@
         },
         "Tile 10": {
           "name": "Zalcano",
-          "complete": false
+          "complete": true
         },
         "Tile 11": {
           "name": "Royal Titans",
